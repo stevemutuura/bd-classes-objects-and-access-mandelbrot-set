@@ -73,6 +73,26 @@ and computes the next iteration of the Mandelbrot function.
 
 Display the Mandelbrot set as pictured below:
 
+## Extensions 1
+
+Modify the `Mandelbrot()` method to allow for panning and zoom.
+
+Panning can be done using the `translate()` method and you can use Processing's 
+`mouseDragged` method for catching the input.
+
+Zooming can be mathematically difficult if you want it to zoom in around a specific
+point outside of (0, 0). The range of values considered is defined in the for loop
+of the Mandelbrot method.
+
+## Extensions 2
+
+For curious students, look up Julia sets. These are a more generalized form of the
+equation we used in this lesson. With Julia sets, you can modify the initial
+conditions to animate the set. Check out 
+[this animation](https://en.wikipedia.org/wiki/Julia_set#/media/File:JSr07885.gif)
+from the Wikipedia article. Keep in mind only the initial values for the equation
+are changed between each frame, once you have one set, you have access to all of them.
+
 ## Concepts
 
 ### Recursive Math Functions
