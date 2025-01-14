@@ -18,13 +18,20 @@ public class Main extends PApplet {
         Mandelbrot();
     }
 
-//    public Cnum ZnPlusOne(Cnum Zn, Cnum C) {
-//          //Compute Zn+1 = Zn^2 + C
-//    }
+    public Cnum ZnPlusOne(Cnum Zn, Cnum C) {
+        //Compute Zn+1 = Zn^2 + C
 
-//    public float getCnumMagnitude(Cnum cnum) {
-//
-//    }
+        float Zn2a = Zn.getA() * Zn.getA() - Zn.getB() * Zn.getB();
+        float Zn2b = 2 * Zn.getA() * Zn.getB();
+        Cnum Zn2 = new Cnum(Zn2a, Zn2b);
+
+        return new Cnum(Zn2.getA() + C.getA(), Zn2.getB() + C.getB());
+    }
+
+    public float getCnumMagnitude(Cnum cnum) {
+        // How do we calculate magnitude of a complex number?
+        return (float) Math.sqrt(cnum.getA() * cnum.getA() + cnum.getB() * cnum.getB());
+    }
 
     public void Mandelbrot() {
         noStroke();
